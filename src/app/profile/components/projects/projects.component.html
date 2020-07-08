@@ -1,0 +1,104 @@
+<div class="body">
+  <section id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="text-uppercase section-heading">Projects</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <!-- change it to toggle between icon and text graphically -->
+          <mat-slide-toggle [(ngModel)]="displayIcons">Text</mat-slide-toggle>
+        </div>
+      </div>
+      <div class="row space-rows" id="animated-cards">
+        <div class="col" *ngFor="let project of projects; let cardIndex = index">
+          <div class="card cards-shadown cards-hover">
+            <div class="card-header">
+              <div class="row">
+                <div class="cardheader-text">
+                  <h1 id="heading-card-1" class="heading-card">{{project.projectName}}</h1>
+                </div>
+              </div>
+            
+            </div>
+            <div class="card-body">
+              <!-- <p class="card-text sub-text-color"> Description:</p>
+              <p class="card-text cardbody-sub-text">We provide all you need for a special website or web
+                app.<br /><br /><br /></p> -->
+                <!-- <div class="row icon-row">
+                    <ul>
+                      <li class="col-xs-6" *ngFor="let icon of project.technicalIcons">
+                        <a>
+                          <mat-icon [svgIcon]="icon.toLocaleLowerCase()" role="img"></mat-icon>
+                        </a>
+                      </li>
+                    </ul>
+                  </div> -->
+                      <ul ngbNav #nav="ngbNav" class="nav-tabs" id="bologna-list" role="tablist">
+                        <li ngbNavItem *ngFor = "let id of projectDetailsId; let tabIndex = index" >
+                          <a ngbNavLink >{{id}}</a>
+                          <ng-template ngbNavContent><p>{{project.description}}</p></ng-template>
+                        </li>
+                        <!-- <li class="nav-item">
+                          <a class="nav-link"  routerLink='"."' fragment="history" aria-controls="history" aria-selected="false">History</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#deals" role="tab" aria-controls="deals" aria-selected="false">Deals</a>
+                        </li> -->
+                      </ul>
+                      <h4 class="card-title">Bologna</h4>
+                      <h6 class="card-subtitle mb-2">Emilia-Romagna Region, Italy</h6>
+                      
+                       <div class="tab-content mt-3" >
+                        <div class="tab-pane active"  role="tabpanel"  id="{{'description' + cardIndex}}" >
+                          <p class="card-text">It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people. </p>
+                          <a href="#" class="card-link text-danger">Read more</a>
+                        </div>
+                         
+                        <div class="tab-pane" id="{{'technologies' + cardIndex}}" role="tabpanel" aria-labelledby="technologies-tab">  
+                          <p class="card-text">First settled around 1000 BCE and then founded as the Etruscan Felsina about 500 BCE, it was occupied by the Boii in the 4th century BCE and became a Roman colony and municipium with the name of Bononia in 196 BCE. </p>
+                          <a href="#" class="card-link text-danger">Read more</a>
+                        </div>
+                         
+                        <div class="tab-pane" id="{{'deals' + cardIndex}}" role="tabpanel" aria-labelledby="deals-tab">
+                          <p class="card-text">Immerse yourself in the colours, aromas and traditions of Emilia-Romagna with a holiday in Bologna, and discover the city's rich artistic heritage.</p>
+                          <a href="#" class="btn btn-danger btn-sm">Get Deals</a>
+                        </div>
+                      </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col">
+                      <div class="card cards-shadown cards-hover">
+                          <div class="card-header"><span class="space"><i class="fab fa-windows service-icon" id="service-icon-2"></i></span>
+                              <div class="cardheader-text">
+                                  <h4 id="heading-card-2" class="heading-card">Windows</h4>
+                                  <p id="cardheader-subtext-2" class="cardheader-subtext">C#, C++</p>
+                              </div>
+                          </div>
+                          <div class="card-body">
+                              <p class="card-text sub-text-color"> Description:</p>
+                              <p class="card-text cardbody-sub-text">Any programme in .NetFreamwork and C base Language.<br /><br /><br /></p>
+                          </div>
+                      </div>
+                  </div> -->
+      <!-- <div class="col">
+                      <div class="card cards-shadown cards-hover">
+                          <div class="card-header cards-header-hover"><span class="space"><i class="fab fa-java service-icon" id="service-icon-3"></i></span>
+                              <div class="cardheader-text">
+                                  <h4 id="heading-card-3" class="heading-card">Java</h4>
+                                  <p id="cardheader-subtext-3" class="cardheader-subtext">Android, Spring</p>
+                              </div>
+                          </div>
+                          <div class="card-body">
+                              <p class="card-text sub-text-color"> Description:</p>
+                              <p class="card-text cardbody-sub-text">All Java base programme include Andoid Apps and Web Back-end by Spring.</p>
+                          </div>
+                      </div>
+                  </div> -->
+    </div>
+  </section>
+</div>

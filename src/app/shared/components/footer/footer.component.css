@@ -1,0 +1,64 @@
+/* 
+
+ul#horizontal-list {
+    overflow-y: hidden; 
+    overflow-x: hidden; 
+	display: flex;
+    align-items: stretch; /* Default */
+    /* justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    bottom: ;
+} */
+
+/* 
+li
+{
+    display: block;
+    flex: 0 1 auto; /* Default */
+    /* list-style-type: none;  
+}   */
+
+.navbar {
+    background-color: #ffffff00;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: justify;
+    list-style-type: none;
+    padding-bottom: 10px;;
+  }
+
+
+.about{
+    padding-left: 7.7%;
+}
+
+.contact{
+    padding-right: 7.7%;
+}
+
+.typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid blue; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: blue }
+  }
