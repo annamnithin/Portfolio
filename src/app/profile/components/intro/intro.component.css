@@ -1,40 +1,109 @@
 /* root elements css */
 @import 'https://fonts.googleapis.com/css?family=Overlock:400,400i,700|Oleo+Script';
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
-*,
-*::before,
-*::after,
-:root{
-  margin:0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.div-main{
-  overflow: hidden;
-  height: 100%;
-  min-height: 100vh;
-  perspective: 1px;
-}
-
-
+@import url(https://fonts.googleapis.com/css?family=Seaweed+Script);
+@import url(https://fonts.googleapis.com/css?family=Arvo:700);
 /* header */
 
-.content-box{
-  font-size: 4rem;
-  text-align: center;
+.root-grid{
+  height: 100%;
+  padding: 1vh;
+
+}
+
+#home-background {
+  width: 180vw;
+  height: 170vh;
+  position: fixed;
+  top: -70vh;
+  left: -50vw;
+  z-index: -1;
+}
+
+.morph-path{
+  animation-direction:alternate-reverse;
+  animation: move_wave 10s linear infinite;
+}
+
+@keyframes move_wave {
+    0% {
+        transform: translateY(0) translateZ(1) scaleY(1)
+    }
+    50% {
+        transform: translateY(-25%) translateZ(0) scaleY(0.55)
+    }
+    50% {
+        transform: translateY(-15%) translateZ(0) scaleY(1)
+    }
+}
+
+.about{
+  font-size: 8vw;
+  color:#fff;
+  line-height: 8vh;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-size: 80% 100%;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  
+  100% {
+    background-position-x: 500%;
+  }
+}
+
+
+#about-tile{
+  /* background-color: #000; */
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+}
+
+.about-block{
   position: absolute;
-  padding: 1rem;
-  background: #fafafa;
-  box-shadow: 0 0 20px #333;
+  top:10%;
+}
+
+
+.header-text{
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateZ(-1px) scale(2) translate(-25%, -25%);
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  
+}
+
+.tiles{
+  background-color: f8f9f4;
 }
 
 
-.content{
-  width: 14em;
-  font-size: 90%;
-  /* transform: translateY(-50%);     */
+.projects{
+  position: relative;
+  text-align: center;
+  color: white;
 }
+
+.menu {
+  position: relative;
+  left: 12vw;
+  color: #564832;
+  font-family: ochre;
+  font-weight: bold;
+  font-size: 5vw;
+  line-height: 0.8em;
+  
+  margin:0;
+  text-align: center;
+}
+

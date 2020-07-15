@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
 
+
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -64,10 +65,8 @@ export class ProjectsComponent implements OnInit {
     asp: './././assets/images/asp-net.svg',
   };
 
-  projectDetailsId = ['description', 'technologies', 'duration'];
-  color = 'accent';
-
-  displayIcons = false;
+  projectDetailsId = ['Description', 'Technologies', 'Duration'];
+  displayIcons = true;
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
 

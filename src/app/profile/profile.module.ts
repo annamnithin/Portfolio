@@ -7,6 +7,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import * as profileComponents from './components';
 import { RouterModule, Routes, ExtraOptions } from '@angular/router';
@@ -26,11 +28,13 @@ const routes: Routes = [
     CommonModule,
     FontAwesomeModule,
     MatIconModule,
+    MatChipsModule,
     HttpClientModule,
     MatSlideToggleModule,
     MatToolbarModule,
     FormsModule,
     NgbModule,
+    MatGridListModule,
     RouterModule.forRoot(routes, routerOptions)
   ],
   exports: [
