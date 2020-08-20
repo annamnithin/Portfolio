@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef, AfterContentInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import Typewriter from 'typewriter-effect/dist/core';
 
 

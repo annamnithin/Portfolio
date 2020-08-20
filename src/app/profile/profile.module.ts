@@ -12,6 +12,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 
 import * as profileComponents from './components';
 import { RouterModule, Routes, ExtraOptions } from '@angular/router';
+import { EducationComponent } from './components/education/education.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 const routerOptions: ExtraOptions =  {
   scrollPositionRestoration: 'enabled',
@@ -23,7 +25,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [...profileComponents.components],
+  declarations: [...profileComponents.components, EducationComponent, ContactComponent],
   imports: [
     CommonModule,
     FontAwesomeModule,

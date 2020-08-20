@@ -1,9 +1,5 @@
-/* .body{ 
-  background-color: #F4DECB;
-  height: 100%;
-} */
 
-.container-fluid::-webkit-scrollbar {
+/* .container-fluid::-webkit-scrollbar {
   display: none;
 }
 
@@ -30,11 +26,11 @@
 
 #animated-cards .col {
   padding: 20px 7px 0px 7px;
-}
+} */
 
 /* Card Hover Scale & Effect */
 
-#animated-cards .card:hover {
+/* #animated-cards .card:hover {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -o-transform: scale(1.2);
@@ -54,25 +50,26 @@
 
 /* Color on hover */
 
-#animated-cards .card-header:first-child:hover {
+/* #animated-cards .card-header:first-child:hover {
   background-color: #64348A;
 }
 
 #animated-cards .card:hover .card-header:first-child {
   background-color: #64348A;
-}
+} */ */
 
 /* CSS to change Default/'Accent' color */
 
-::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+/* ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
   background-color: #64348A;
-  /*replace with your color*/
+ 
 }
 
 ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
   background-color: #64348A;
-  /*replace with your color*/
-}
+  
+} */
+
 
 .technologies ul {
   margin: 0;
@@ -180,4 +177,103 @@
 
 #duration .col-lg-3 {
   margin-right: 2vh;
+  height: 10vh;
 }
+
+
+
+
+*{
+  color: black;
+}
+
+
+
+/* .projects-main .project-one, .projects-main .project-title{
+  position: relative;
+} */
+
+tr{
+  border-bottom: 0.5vh solid #000000;
+}
+
+.projects-main{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title-role, .title-company, .title, .title-more{
+  font-family: "Ogg";
+    font-size: 1.5vw;
+    position: relative;
+    display: inline-block;
+    font-weight: normal !important;
+}
+
+.text-position{
+ line-height: 15vh;
+}
+
+.project{
+  font-family: "Monument";
+  font-size: 7vh;
+  text-decoration: none;
+  color: #000000;
+}
+
+tbody tr{
+  overflow: hidden;
+  height: 20vh;
+  white-space: nowrap;
+}
+
+/* arrow */
+
+
+.pos {
+  position:relative;
+  margin:2vh auto;
+  top:50%
+}
+
+.down-arrow {
+  height:8vh;
+  width:4vw;
+  border:4px solid #000;
+  border-radius:100%;
+}
+
+.down-arrow:before,.down-arrow:after {
+  content:'';
+  position:absolute;
+  top:3vh;
+  width:1.5vw;
+  border:2px solid #000;
+  transition:all 0.3s;
+  -webkit-transition:all 0.3s;
+}
+
+.down-arrow:before {
+  transform:rotateZ(45deg);
+  -webkit-transform:rotateZ(45deg);
+  left:0.7vw;
+}
+
+.down-arrow:after {
+  transform:rotateZ(-45deg);
+  -webkit-transform:rotateZ(-45deg);
+  left:1.5vw;
+}
+
+
+.description{
+  white-space: normal !important;
+}
+
+
+/* 
+.down-arrow:hover {cursor:pointer;border-width:0;}
+.down-arrow:hover:before,.down-arrow:hover:after {top:40px;}
+.down-arrow:hover:before {left:13px;}
+.down-arrow:hover:after {left:26px;} */

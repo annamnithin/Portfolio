@@ -12,20 +12,11 @@ export class ProjectsComponent implements OnInit {
 
   projects = [
     {
-      projectName: 'Enterprise Chat bot',
-      fromDate: '01/2020 ',
-      toDate: '',
-      description: [
-        'Designing and Implementing enterprise wide chat bot \
-        using azure cognitive services to resolve employees queries. using object oriented designs.',
-      ],
-      technologiesUsed: ['Azure Web Services', 'Bot Framework API', 'Azure Cloud', 'Angular', 'Python'],
-      technicalIcons: ['azure', 'python', 'angular']
-    },
-    {
       projectName: 'Retail Management',
       fromDate: '03/2020',
-      toDate: '05/2020',
+      endDate: '05/2020',
+      role: 'Full Stack Developer',
+      client: 'Personal Project',
       description: [
         'Designing Window Application to handle retail management for stores using object oriented design.',
       ],
@@ -35,7 +26,9 @@ export class ProjectsComponent implements OnInit {
     {
       projectName: 'PayRoll',
       fromDate: '11/2018',
-      toDate: '02/2019',
+      endDate: '02/2019',
+      role: 'Database Developer',
+      client: 'Infosys',
       description: [
         'Application for reconciliation of salaries components for employees for 24 countries',
       ],
@@ -45,13 +38,28 @@ export class ProjectsComponent implements OnInit {
     {
       projectName: 'Cash Application',
       fromDate: '10/2019',
-      toDate: '12/2019',
+      endDate: '12/2019',
+      role: 'Backend Developer',
+      client: 'Infosys',
       description: [
         'Programming Algorithms for identifying patterns \
          and Extraction of required data from daily bank transactions) and reconciliation with master data ',
       ],
       technologiesUsed: ['Python', 'Automation Anywhere'],
       technicalIcons: ['python']
+    },
+    {
+      projectName: 'Enterprise Chat bot',
+      fromDate: '01/2020 ',
+      endDate: '',
+      role: 'Full Stack Developer',
+      client: 'EY',
+      description: [
+        'Designing and Implementing enterprise wide chat bot \
+        using azure cognitive services to resolve employees queries. using object oriented designs.',
+      ],
+      technologiesUsed: ['Azure Web Services', 'Bot Framework API', 'Azure Cloud', 'Angular', 'Python'],
+      technicalIcons: ['azure', 'python', 'angular']
     },
   ];
 
@@ -65,7 +73,7 @@ export class ProjectsComponent implements OnInit {
     asp: './././assets/images/asp-net.svg',
   };
 
-  projectDetailsId = ['Description', 'Technologies', 'Duration'];
+  headers = ['Description', 'Technologies', 'Duration'];
   displayIcons = true;
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {

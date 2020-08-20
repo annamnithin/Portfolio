@@ -1,0 +1,41 @@
+<div class="contact">
+    <div class="contact-me-description">
+        Want to talk to me?
+    </div>
+    <div class="container contact-info">
+        <div class = "row">
+            <div class="col-9">
+                <span id="linkedindata" *ngIf="showDiv =='linkedin'">nithin-annam</span>
+            </div>
+            <div class="col-3">
+                <div class="LinkedIn">
+                    <a (mouseover)="activate('linkedin')" href="https://www.linkedin.com/in/nithin-annam/" id="link" target="_blank">
+                        <fa-icon [icon]="faLinkedIn"></fa-icon>      
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <span id="emaildata" *ngIf="showDiv =='email'">nithinsiva71@gmail.com</span>
+            </div>
+            <div class="col-3">
+                <div (mouseover)="activate('email')" class="email"> 
+                    <fa-icon [icon]="envelope"></fa-icon>
+                </div>  
+            </div>
+          
+        </div>
+        <div class="row"> 
+            <div class="col-9">
+                <span id="phonedata" *ngIf="showDiv =='phone'">+91 9912312382</span>
+            </div>
+            <div class="col-3">
+                <div (mouseover)="activate('phone')" class="phone">
+                    <fa-icon [icon]="mobile"></fa-icon>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

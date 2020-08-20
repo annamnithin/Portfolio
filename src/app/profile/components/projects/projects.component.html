@@ -1,13 +1,13 @@
-<div class="container-fluid mt-4">
+<!-- <div class="container-fluid mt-4">
   <div class="row text-center" style="justify-content: center; align-items: center;">
     <h2 class="text-uppercase section-heading">Projects</h2>
   </div>
   <div class="row mb-3">
-    <!-- change it to toggle between icon and text graphically -->
+
     <div class="col d-flex align-items-end flex-column">
       <mat-slide-toggle  [(ngModel)]="displayIcons">Text</mat-slide-toggle>
     </div>
-    
+
   </div>
   <div class="row">
     <div class="d-flex flex-row flex-nowrap" id="animated-cards">
@@ -27,21 +27,9 @@
                 <li [ngbNavItem]="tabIndex" *ngFor="let id of projectDetailsId; let tabIndex = index">
                   <a ngbNavLink>{{id}}</a>
                   <ng-template ngbNavContent>
-                    <!-- Technologies block -->
+                    
                     <div *ngIf="id == 'Technologies'">
-                      <!-- display text -->
-                      <div *ngIf="!displayIcons">
-                        <div class="row icon-row" ngClass="technologies">
-                          <ul>
-                            <li class="col-xs-6" *ngFor="let icon of project.technicalIcons">
-                              <a>
-                                <mat-icon [svgIcon]="icon.toLocaleLowerCase()" role="img"></mat-icon>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <!-- display Icons -->
+                       
                       <div *ngIf="displayIcons">
                         <div class="row tech-txt" id=''>
                           <mat-chip-list aria-label="Fish selection">
@@ -52,11 +40,10 @@
                       </div>
   
                     </div>
-                    <!-- Description Block -->
                     <div *ngIf="id == 'Description'">
                       <p>{{project.description}}</p>
                     </div>
-                    <!-- Project duration block -->
+                    
                     <div *ngIf="id == 'Duration'">
                       <div id="duration" class="container">
                         <div class="row " style='margin-bottom:4vh' id="from-date">
@@ -104,3 +91,147 @@
   </div>
   
 </div>
+ -->
+
+
+<table class="table table-borderless table-light projects-main">
+  <thead>
+    <tr>
+      <th scope="col" style="width:15%">
+        <span class="title-role d-flex justify-content-center">role</span>
+      </th>
+      <th scope="col" style="width: 50%">
+        <span class="title d-flex justify-content-center">project</span>
+      </th>
+      <th scope="col" style="width: 15%">
+        <span class="title-company d-flex justify-content-center">company</span>
+      </th>
+      <th scope="col" style="width: 10;">
+        <span class="title-more d-flex justify-content-center">more</span>
+
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let project of projects">
+      <td>
+        <span class="title-role d-flex justify-content-center align-middle text-position">{{project.role}}</span>
+      </td>
+      <td>
+        <span class="project d-flex justify-content-center align-middle text-position">{{project.projectName}}</span>
+      </td>
+      <td>
+        <span class="title-company d-flex justify-content-center align-middle text-position">{{project.client}}</span>
+      </td>
+      <td>
+        <div class="pos down-arrow" type="button" data-toggle="modal" data-target="#exampleModalCenter">
+        </div>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="cardheader-text">
+                  <h1 id="heading-card-1" class="modal-title heading-card">{{project.projectName}}</h1>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div role="tabpanel">
+                  <ul class="nav nav-pills nav-fill" id="bologna-list" role="tablist">
+                    <li class="nav-item" style="width:15vw">
+                      <a class="nav-link active" href="#technologiesTab" aria-controls="technologiesTab" role="tab"
+                        data-toggle="tab">Technologies</a>
+                    </li>
+                    <li class="nav-item" style="width:15vw">
+                      <a class="nav-link" href="#descriptionTab" aria-controls="descriptionTab" role="tab"
+                        data-toggle="tab">Description</a>
+                    </li>
+                    <li class="nav-item" style="width:15vw">
+                      <a class="nav-link" href="#durationTab" aria-controls="durationTab" role="tab"
+                        data-toggle="tab">Duration</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- <ul class="nav nav-pills nav-fill" id="bologna-list" role="tablist">
+                <li class="nav-item" style="width:15vw">
+                  <a class="nav-link active" href="#">Technologies</a>
+                </li>
+                <li class="nav-item" style="width:15vw">
+                  <a class="nav-link" href="#">Description</a>
+                </li>
+                <li class="nav-item" style="width:15vw">
+                  <a class="nav-link" href="#">Technologies</a>
+                </li>
+              </ul> -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active" id="technologiesTab">
+                    <div *ngIf="displayIcons">
+                      <div class="tech-txt" id=''>
+                        <mat-chip-list aria-label="Fish selection">
+                          <mat-chip [ngStyle]="{'background-color':'#64348A'}" selected
+                            *ngFor="let technology of project.technologiesUsed">{{technology}}</mat-chip>
+                        </mat-chip-list>
+                      </div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="descriptionTab">
+                    <div class="description">
+                      <p>{{project.description}}</p>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="durationTab">
+                       <div id="duration" class="container">
+                        <div class="row " style='margin-bottom:4vh' id="from-date">
+                          <div class="col-lg-3 block">
+                            <div class="circle">
+                              <p>{{project.fromDate.split('/')[0]}}</p>
+                            </div>
+                            <div class="circle top-outer-circle "></div>
+                          </div>
+                          <div class="col-lg-3 block">
+                            <div class="circle">
+                              <p>{{project.fromDate.split('/')[1]}}</p>
+                            </div>
+                            <div class="circle right-outer-circle "></div>
+                          </div>
+                          <div class="col-lg-3">
+                            <p>From Date</p>
+                          </div>
+                        </div>
+                        <div class="row" id="to-date">
+                          <div class="col-lg-3 block" id="month">
+                            
+                            <div class="circle">
+                              <p>{{project.endDate.split('/')[0]}}</p>
+                            </div>
+                            <div class="circle top-outer-circle"></div>
+                          </div>
+                          <div class="col-lg-3 block" id="year">
+                            <div class="circle">
+                              <p>{{project.endDate.split('/')[1]}}</p>
+                            </div>
+                            <div class="circle right-outer-circle "></div>
+                          </div>
+                          <div class="col-lg-3">
+                            <p>To Date</p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
+                <!-- <div [ngbNavOutlet]="nav" class="mt-2"></div> -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

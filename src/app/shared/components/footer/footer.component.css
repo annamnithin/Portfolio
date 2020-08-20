@@ -1,64 +1,157 @@
-/* 
 
-ul#horizontal-list {
-    overflow-y: hidden; 
-    overflow-x: hidden; 
-	display: flex;
-    align-items: stretch; /* Default */
-    /* justify-content: space-between;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    bottom: ;
-} */
+/* Ignore the body style if you use this code on your own page */
 
-/* 
-li
-{
-    display: block;
-    flex: 0 1 auto; /* Default */
-    /* list-style-type: none;  
-}   */
-
-.navbar {
-    background-color: #ffffff00;
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: justify;
-    list-style-type: none;
-    padding-bottom: 10px;;
-  }
-
-
-.about{
-    padding-left: 7.7%;
+.logo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 0;
+/*   background-image: linear-gradient(dimgray, gainsboro, dimgray); */
 }
 
-.contact{
-    padding-right: 7.7%;
+#yin-yang {
+	width: 6vw;
+	height: 6vw;
+	right:-0.5vw;
+	background: #fff;
+	border-color: #000;
+	border-style: solid;
+	border-width: 0.2vw 0.2vw 3vw 0.2vw;
+	border-radius: 100%;
+  position: relative;
+  animation:rotate 40000s infinite;
+
 }
 
-.typewriter {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid blue; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-      typing 3.5s steps(30, end),
-      blink-caret .5s step-end infinite;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: blue }
-  }
+#yin-yang:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	background: #fff;
+	border: 1vw solid #000;
+	border-radius: 100%;
+	width: 2.8vw;
+	height: 2.8vw;
+}
+
+#yin-yang:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: #000;
+	border: 1vw solid #fff;
+	border-radius:100%;
+	width: 2.8vw;
+	height: 2.8vw;
+}
+
+@keyframes rotate {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(3600000deg);}
+}
+
+
+ 
+ a {
+	 color: inherit;
+}
+ 
+ .menu {
+	 filter: url('#shadowed-goo');
+}
+ .menu-item, .menu-open-button {
+	 background: #000;
+	 border-radius: 100%;
+	 width: 5vw;
+	 height: 10vh;
+	 
+	 position: absolute;
+	 top: 5vh;
+   right:1%;
+	 color: white;
+	 text-align: center;
+	 line-height: 80px;
+	 transform: translate3d(0, 0, 0);
+	 transition: transform ease-out 200ms;
+}
+ .menu-open {
+	 display: none;
+}
+ .hamburger {
+	 width: 25px;
+	 height: 3px;
+	 background: white;
+	 display: block;
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 margin-left: -12.5px;
+	 margin-top: -1.5px;
+	 transition: transform 200ms;
+}
+ 
+ .menu {
+	 position: absolute;
+	 right: 2vw;
+	 width: 50vw;
+	 height: 30vh;
+	 box-sizing: border-box;
+	 font-size: 1.5vw;
+	 text-align: left;
+	 z-index : 1000;
+}
+ .menu-item:hover {
+	 background: white;
+	 color: #000;
+}
+ .menu-item:nth-child(3) {
+	 transition-duration: 180ms;
+}
+ .menu-item:nth-child(4) {
+	 transition-duration: 180ms;
+}
+ .menu-item:nth-child(5) {
+	 transition-duration: 180ms;
+}
+ .menu-item:nth-child(6) {
+	 transition-duration: 180ms;
+}
+ .menu-open-button {
+	 z-index: 2;
+	 transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	 transition-duration: 400ms;
+	 transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+	 cursor: pointer;
+}
+ .menu-open-button:hover {
+	 transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+ .menu-open:checked + .menu-open-button {
+	 transition-timing-function: linear;
+	 transition-duration: 200ms;
+	 transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+ .menu-open:checked ~ .menu-item {
+	 transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+ .menu-open:checked ~ .menu-item:nth-child(3) {
+	 transition-duration: 170ms;
+	 transform: translate3d(-80px, 0, 0);
+}
+ .menu-open:checked ~ .menu-item:nth-child(4) {
+	 transition-duration: 250ms;
+	 transform: translate3d(-160px, 0, 0);
+}
+ .menu-open:checked ~ .menu-item:nth-child(5) {
+	 transition-duration: 330ms;
+	 transform: translate3d(-240px, 0, 0);
+}
+ .menu-open:checked ~ .menu-item:nth-child(6) {
+	 transition-duration: 410ms;
+	 transform: translate3d(-320px, 0, 0);
+}
+ 

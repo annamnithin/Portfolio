@@ -1,5 +1,6 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { faAddressCard } from '@fortawesome/free-regular-svg-icons';
+import {faBookOpen, faBriefcase, faBuilding, faHome, faLaptopCode} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-footer',
@@ -7,33 +8,15 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent implements OnInit {
-  private aboutData = 'ABOUT';
-  private projectsData = 'PROJECTS';
-  private contactData = 'CONTACT';
-  menu = {
-    about: '',
-    projects: '',
-    contact: '',
-  };
 
-  constructor(private changeDetector: ChangeDetectorRef) {}
+  home = faHome;
+  education = faBookOpen;
+  experience = faBriefcase;
+  projects = faLaptopCode;
+  contact = faAddressCard;
+  constructor() {}
 
   ngOnInit(): void {
-    this.typingCallback(this.aboutData, 'about');
-    this.typingCallback(this.contactData, 'contact');
-    this.typingCallback(this.projectsData, 'projects');
-  }
-
-  typingCallback(dataToPrint, key) {
-    const totalLength = dataToPrint.length;
-    const currentLength = this.menu[key].length;
-    if (currentLength < totalLength) {
-      this.menu[key] = this.menu[key] + dataToPrint[currentLength];
-      this.changeDetector.detectChanges();
-      setTimeout(() => {
-        this.typingCallback(dataToPrint, key);
-      }, 200);
-    }
   }
 
 

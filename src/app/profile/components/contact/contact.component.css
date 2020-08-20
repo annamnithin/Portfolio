@@ -1,0 +1,89 @@
+.contact{
+    display: flex;
+    background-image: url('../../../../assets/images/manga-eyes-looking-paper-tear-260nw-1523804378.webp');
+    background-position: 30vw 20vh;
+    /* background-size: contain; */
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.contact-me-description{
+    
+    left:5vw;
+    font-size: 8vw;   
+    position: relative;
+    line-height: 1;
+    width: 30vw;
+}
+
+.contact-info{
+    right: 2vw;
+    position: relative;
+    width: 30vw;
+    margin-right: 0;
+
+}
+
+.LinkedIn, .email, .phone{
+    font-size: 5vw;
+    right:2vw;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.LinkedIn #link{
+    color: black;
+}
+
+#linkedindata, #emaildata, #phonedata{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 2vw;
+    justify-content: flex-end;
+    align-items: center;
+    animation: slide-left 5s;
+}
+
+
+@keyframes slide-left {
+    from {
+      margin-left: 5%;
+      width: 100%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+/* #linkedindata .activate, #emaildata .activate, #phonedata .activate{
+    display: flex;
+} */
+
+.contact-info .row{
+    margin-bottom: 5vh;
+    display: flex;
+    margin-bottom: 15vh;
+}
+
+.contact-info .email{
+    display: flex;
+    word-break: break-word;
+    line-height: 1;
+}
+
+.contact-info .email #address{
+    font-size: 5vw;
+    color:black;
+}
+
+
+.contact-info .phone #number{
+    font-size: 3vw;
+}
