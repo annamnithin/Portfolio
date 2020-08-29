@@ -12,17 +12,17 @@ export class IntroComponent implements OnInit {
   data = [ 'Hi There!!.', 'I\'m Creative.', 'I Love Design.', 'I Love to Develop.' ];
   constructor(private changeDetector: ChangeDetectorRef) {  }
   ngOnInit(): void {
-    const writer = new Typewriter('.about', {
+    const writer = new Typewriter('.about-header', {
       strings: [ 'Hi There!!.', 'I\'m Creative.', 'I Love Design.', 'I Love to Develop.' ],
       autoStart: true,
       loop: true,
       typeColor: 'white'
     });
-    const projectsWriter = new Typewriter('#projects', {
+    const projectsWriter = new Typewriter('#projects-header', {
     });
-    const educationWriter = new Typewriter('#education', {
+    const educationWriter = new Typewriter('#education-header', {
     });
-    const contactMeWriter = new Typewriter('#contact-me', {
+    const contactMeWriter = new Typewriter('#contact-me-header', {
     });
 
     projectsWriter.typeString('Projects').start();

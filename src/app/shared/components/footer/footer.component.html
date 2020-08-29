@@ -9,10 +9,10 @@
       </div>
     </label>
     
-    <a href="" class="menu-item"> <fa-icon [icon]="home"></fa-icon></a>
-    <a href="/education" class="menu-item"> <fa-icon [icon]="education"></fa-icon></a>
-    <a href="/projects" class="menu-item"> <fa-icon [icon]="projects"></fa-icon> </a>
-    <a href="/contact" class="menu-item"> <fa-icon [icon]="contact"></fa-icon> </a>
+    <a (click)="navigate('intro')" class="menu-item"> <fa-icon [icon]="home"></fa-icon></a>
+    <a (click)="navigate('education')" class="menu-item"> <fa-icon [icon]="education"></fa-icon></a>
+    <a (click)="navigate('projects')" class="menu-item"> <fa-icon [icon]="projects"></fa-icon> </a>
+    <a (click)="navigate('contact-me')" class="menu-item"> <fa-icon [icon]="contact"></fa-icon> </a>
     
     
   </nav>

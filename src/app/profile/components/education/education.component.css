@@ -315,3 +315,24 @@
 .carousel-inner {
   height: 100%;
 }
+
+.carousel-indicators{
+  bottom: 10%;
+}
+
+.carousel .carousel-indicators li {
+
+  background-color: #000;
+  border: 1px solid;
+  border-radius: 12px;
+  width: 12px;
+  height: 12px;
+}
+
+.carousel .carousel-indicators .active {
+  background-color: #000;
+  border: 1px solid ;
+  border-radius: 12px;
+  width: 12px;
+  height: 12px;
+}

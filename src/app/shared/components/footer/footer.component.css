@@ -68,13 +68,12 @@
 	 border-radius: 100%;
 	 width: 5vw;
 	 height: 10vh;
-	 
 	 position: absolute;
 	 top: 5vh;
-   right:1%;
+   	 right:1%;
 	 color: white;
 	 text-align: center;
-	 line-height: 80px;
+	 line-height: 10vh;
 	 transform: translate3d(0, 0, 0);
 	 transition: transform ease-out 200ms;
 }
