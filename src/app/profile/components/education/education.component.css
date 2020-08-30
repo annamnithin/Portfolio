@@ -4,7 +4,7 @@
 }
 
 .bg-cover {
-  background-position: right !important;
+  background-position:100% 100%  !important;
   background-repeat: no-repeat !important;
 }
 
@@ -292,6 +292,8 @@
   position: relative;
   top: 30vh;
   z-index: 200;
+  margin: 0;
+  left: 12%;
 }
 
 #school .name {
