@@ -89,7 +89,7 @@
   font-size: 50px;
   position: relative;
   transition: .5s ease-in-out;
-  color: #64348A;
+  color: #000;
   z-index: 1
 }
 
@@ -112,7 +112,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: #64348A;
+  background: #000;
   border-radius: 50%;
   transform: scale(0);
   transition: .5s ease-in-out;
@@ -150,7 +150,7 @@
   height: 5vh !important;
   border-top-left-radius: 7.5vh !important;
   border-top-right-radius: 7.5vh !important;
-  border: 2vh solid #64348A !important;
+  border: 2vh solid #000 !important;
   border-bottom: 0 !important;
   z-index: 9;
 }
@@ -158,7 +158,7 @@
 #duration .right-outer-circle {
   border-radius: 0vh !important;
   width: 5vh !important;
-  border: 2vh solid #64348A !important;
+  border: 2vh solid #000 !important;
   z-index: 9;
   left: 7vh;
   border-top-right-radius: 7.5vh !important;
@@ -258,8 +258,8 @@ tr{
 }
 
 .project{
-  font-family: "Monument";
-  font-size: 7vh;
+  font-family: "Roboto";
+  font-size: 6vh;
   text-decoration: none;
   color: #000000;
 }
@@ -313,9 +313,6 @@ tbody tr{
   white-space: normal !important;
 }
 
-
-/* 
-.down-arrow:hover {cursor:pointer;border-width:0;}
-.down-arrow:hover:before,.down-arrow:hover:after {top:40px;}
-.down-arrow:hover:before {left:13px;}
-.down-arrow:hover:after {left:26px;} */
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+  background-color: #000;
+}

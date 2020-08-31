@@ -77,7 +77,7 @@
 
 #about-tile{
   /* background-color: #000; */
-  
+  font-family: Nunito;  
   display: flex;
   word-break: break-word;
   line-height: 20vh;
@@ -88,6 +88,7 @@
   position: absolute;
   top:10%;
   width: 45vw;
+  
 }
 
 
@@ -127,15 +128,18 @@
   top:20%;
   position: absolute;
   right: 5%;
+  cursor: pointer;
 }
 
 .projects-tile{
   top:40%;
   position: absolute;
   right: 5%;
+  cursor: pointer;
 }
 .contact-tile{
   top:60%;
   position: absolute;
   right: 5%;
+  cursor: pointer;
 }

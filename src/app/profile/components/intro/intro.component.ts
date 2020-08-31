@@ -29,4 +29,11 @@ export class IntroComponent implements OnInit {
     educationWriter.typeString('Education').start();
     contactMeWriter.typeString('Contact Me').start();
   }
+
+  navigate(elementId) {
+    const element = document.getElementById(elementId);
+    console.log(element);
+    element.scrollIntoView({behavior: 'smooth'});
+  }
+
 }
