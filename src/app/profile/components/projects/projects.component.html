@@ -119,7 +119,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let project of projects">
+    <tr *ngFor="let project of projects; index as i">
       <td>
         <span class="title-role d-flex justify-content-center align-middle text-position">{{project.role}}</span>
       </td>
@@ -130,10 +130,10 @@
         <span class="title-company d-flex justify-content-center align-middle text-position">{{project.client}}</span>
       </td>
       <td>
-        <div class="pos down-arrow" type="button" data-toggle="modal" data-target="#exampleModalCenter">
+        <div class="pos down-arrow" type="button" data-toggle="modal" [attr.data-target]="'#projectDetails'+ project.id">
         </div>
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-          aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="{{'projectDetails'+project.id}}" role="dialog"
+          aria-labelledby="Title" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -148,24 +148,21 @@
                 <div role="tabpanel">
                   <ul class="nav nav-pills nav-fill" id="bologna-list" role="tablist">
                     <li class="nav-item" style="width:15vw">
-                      <a class="nav-link active" href="#technologiesTab" aria-controls="technologiesTab" role="tab"
-                        data-toggle="tab">Technologies</a>
+                      <a class="nav-link active" [attr.href]="'#technologiesTab'+project.id" role="tab" data-toggle="tab">Technologies</a>
                     </li>
                     <li class="nav-item" style="width:15vw">
-                      <a class="nav-link" href="#descriptionTab" aria-controls="descriptionTab" role="tab"
-                        data-toggle="tab">Description</a>
+                      <a class="nav-link" [attr.href]="'#descriptionTab'+project.id" role="tab" data-toggle="tab">Description</a>
                     </li>
                     <li class="nav-item" style="width:15vw">
-                      <a class="nav-link" href="#durationTab" aria-controls="durationTab" role="tab"
-                        data-toggle="tab">Duration</a>
+                      <a class="nav-link" [attr.href]="'#durationTab'+project.id" role="tab" data-toggle="tab">Duration</a>
                     </li>
                   </ul>
                 </div>
-      
+
                 <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane active" id="technologiesTab">
+                  <div role="tabpanel" class="tab-pane active" [attr.id]="'technologiesTab'+project.id">
                     <div *ngIf="displayIcons">
-                      <div class="tech-txt" id=''>
+                      <div class="tech-txt">
                         <mat-chip-list aria-label="Fish selection">
                           <mat-chip [ngStyle]="{'background-color':'#000'}" selected
                             *ngFor="let technology of project.technologiesUsed">{{technology}}</mat-chip>
@@ -173,49 +170,49 @@
                       </div>
                     </div>
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="descriptionTab">
+                  <div role="tabpanel" class="tab-pane" [attr.id]="'descriptionTab'+project.id">
                     <div class="description">
                       <p>{{project.description}}</p>
                     </div>
                   </div>
-                  <div role="tabpanel" class="tab-pane" id="durationTab">
-                       <div id="duration" class="container">
-                        <div class="row " style='margin-bottom:4vh' id="from-date">
-                          <div class="col-lg-3 block">
-                            <div class="circle">
-                              <p>{{project.fromDate.split('/')[0]}}</p>
-                            </div>
-                            <div class="circle top-outer-circle "></div>
+                  <div role="tabpanel" class="tab-pane" [attr.id]="'durationTab'+project.id">
+                    <div id="duration" class="container">
+                      <div class="row " style='margin-bottom:4vh' id="from-date">
+                        <div class="col-lg-3 block">
+                          <div class="circle">
+                            <p>{{project.fromDate.split('/')[0]}}</p>
                           </div>
-                          <div class="col-lg-3 block">
-                            <div class="circle">
-                              <p>{{project.fromDate.split('/')[1]}}</p>
-                            </div>
-                            <div class="circle right-outer-circle "></div>
-                          </div>
-                          <div class="col-lg-3">
-                            <p>From Date</p>
-                          </div>
+                          <div class="circle top-outer-circle "></div>
                         </div>
-                        <div class="row" id="to-date">
-                          <div class="col-lg-3 block" id="month">
-                            
-                            <div class="circle">
-                              <p>{{project.endDate.split('/')[0]}}</p>
-                            </div>
-                            <div class="circle top-outer-circle"></div>
+                        <div class="col-lg-3 block">
+                          <div class="circle">
+                            <p>{{project.fromDate.split('/')[1]}}</p>
                           </div>
-                          <div class="col-lg-3 block" id="year">
-                            <div class="circle">
-                              <p>{{project.endDate.split('/')[1]}}</p>
-                            </div>
-                            <div class="circle right-outer-circle "></div>
-                          </div>
-                          <div class="col-lg-3">
-                            <p>To Date</p>
-                          </div>
+                          <div class="circle right-outer-circle "></div>
+                        </div>
+                        <div class="col-lg-3">
+                          <p>From Date</p>
                         </div>
                       </div>
+                      <div class="row" id="to-date">
+                        <div class="col-lg-3 block" id="month">
+
+                          <div class="circle">
+                            <p>{{project.endDate.split('/')[0]}}</p>
+                          </div>
+                          <div class="circle top-outer-circle"></div>
+                        </div>
+                        <div class="col-lg-3 block" id="year">
+                          <div class="circle">
+                            <p>{{project.endDate.split('/')[1]}}</p>
+                          </div>
+                          <div class="circle right-outer-circle "></div>
+                        </div>
+                        <div class="col-lg-3">
+                          <p>To Date</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 

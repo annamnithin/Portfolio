@@ -12,6 +12,7 @@ export class ProjectsComponent implements OnInit {
 
   projects = [
     {
+      id: '0',
       projectName: 'Retail Management',
       fromDate: '03/2020',
       endDate: '05/2020',
@@ -24,6 +25,7 @@ export class ProjectsComponent implements OnInit {
       technicalIcons: ['asp', 'sqlserver', 'github']
     },
     {
+      id: '1',
       projectName: 'PayRoll',
       fromDate: '11/2018',
       endDate: '02/2019',
@@ -36,22 +38,25 @@ export class ProjectsComponent implements OnInit {
       technicalIcons: ['asp', 'sqlserver']
     },
     {
+      id: '2',
       projectName: 'Cash Application',
       fromDate: '10/2019',
       endDate: '12/2019',
       role: 'Backend Developer',
       client: 'Infosys',
       description: [
-        'Programming Algorithms for identifying patterns \
-         and Extraction of required data from daily bank transactions) and reconciliation with master data ',
+        'Designing and Implementing enterprise wide chat bot using python \
+        and azure\'s cognitive services to resolve employees queries. ',
+        'Designed to eﬀectively use azure cloud services to handle threshold of 200 users at a time.'
       ],
       technologiesUsed: ['Python', 'Automation Anywhere'],
       technicalIcons: ['python']
     },
     {
+      id: '3',
       projectName: 'Enterprise Chat bot',
       fromDate: '01/2020 ',
-      endDate: '',
+      endDate: '08/2020',
       role: 'Full Stack Developer',
       client: 'EY',
       description: [
