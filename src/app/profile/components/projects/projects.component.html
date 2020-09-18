@@ -139,6 +139,7 @@
               <div class="modal-header">
                 <div class="cardheader-text">
                   <h1 id="heading-card-1" class="modal-title heading-card">{{project.projectName}}</h1>
+                  
                 </div>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
@@ -163,17 +164,30 @@
                   <div role="tabpanel" class="tab-pane active" [attr.id]="'technologiesTab'+project.id">
                     <div *ngIf="displayIcons">
                       <div class="tech-txt">
-                        <mat-chip-list aria-label="Fish selection">
+                       
+                        <!-- <mat-chip-list aria-label="Fish selection">
                           <mat-chip [ngStyle]="{'background-color':'#000'}" selected
                             *ngFor="let technology of project.technologiesUsed">{{technology}}</mat-chip>
-                        </mat-chip-list>
+                        </mat-chip-list> -->
+                        <div class="tech container" >
+                          <div *ngFor="let techIcon of project.technicalIcons">
+                            <div class="icon" ngClass="{{techIcon}}" data-toggle="tooltip" data-placement="top" data-delay='{"show":"1000"}' title="{{iconDescription[techIcon]}}">
+                              <fa-icon class="fab" [icon]="fetchFabIcon(techIcon)" *ngIf="isFabIcon(techIcon); else elseBlock"></fa-icon>
+                              <ng-template #elseBlock>
+                                <i class="fab" [ngClass]="fetchDevIcon(techIcon)"></i>
+                              </ng-template>
+                             </div>
+                             
+                          </div>
+                          
+                        </div>  
                       </div>
                     </div>
                   </div>
                   <div role="tabpanel" class="tab-pane" [attr.id]="'descriptionTab'+project.id">
-                    <div class="description">
-                      <p>{{project.description}}</p>
-                    </div>
+                    <ul>
+                      <li class="description" *ngFor="let point of project.description"><p>{{point}}</p></li>
+                    </ul>
                   </div>
                   <div role="tabpanel" class="tab-pane" [attr.id]="'durationTab'+project.id">
                     <div id="duration" class="container">

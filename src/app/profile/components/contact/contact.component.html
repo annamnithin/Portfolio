@@ -12,10 +12,10 @@
     <div class="container contact-info">
         <div class = "row">
             <div class="col-9">
-                <span id="linkedindata" *ngIf="showDiv =='linkedin'">nithin-annam</span>
+                <span id="linkedindata" *ngIf="showDiv =='linkedin'">linkedin.com/in/nithin-annam/</span>
             </div>
             <div class="col-3">
-                <div class="LinkedIn">
+                <div class="LinkedIn" data-toggle="tooltip" data-placement="top" title="Click to navigate">
                     <a (mouseover)="activate('linkedin')" href="https://www.linkedin.com/in/nithin-annam/" id="link" target="_blank">
                         <fa-icon [icon]="faLinkedIn"></fa-icon>      
                     </a>
@@ -27,9 +27,9 @@
                 <span id="emaildata" *ngIf="showDiv =='email'">nithinsiva71@gmail.com</span>
             </div>
             <div class="col-3">
-                <div (mouseover)="activate('email')" class="email"> 
+                <a data-toggle="tooltip" data-placement="top" title="Click to mail" href="mailto:nithinsiva71@gmail.com" (mouseover)="activate('email')" class="email"> 
                     <fa-icon [icon]="envelope"></fa-icon>
-                </div>  
+                </a>  
             </div>
           
         </div>

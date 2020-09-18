@@ -21,7 +21,6 @@ export class FooterComponent implements OnInit {
 
   navigate(elementId) {
     const element = document.getElementById(elementId);
-    console.log(element);
     element.scrollIntoView({behavior: 'smooth'});
   }
 

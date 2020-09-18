@@ -36,7 +36,7 @@
 
 .morph-path{
   animation-direction:alternate-reverse;
-  animation: move_wave 10s linear infinite;
+  animation: move_wave 12s linear infinite;
 }
 
 @keyframes move_wave {
@@ -87,7 +87,7 @@
 .about-block{
   position: absolute;
   top:10%;
-  width: 45vw;
+  width: 40vw;
   
 }
 

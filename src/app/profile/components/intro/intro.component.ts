@@ -13,7 +13,13 @@ export class IntroComponent implements OnInit {
   constructor(private changeDetector: ChangeDetectorRef) {  }
   ngOnInit(): void {
     const writer = new Typewriter('.about-header', {
-      strings: [ 'Hi There!!.', 'I\'m Creative.', 'I Love Design.', 'I Love to Develop.' ],
+      strings: [ 'Hi There!!', 'I\'m Nithin.',
+      'I\'m a Full stack developer based in India',
+      'I like to design unique websites',
+      'I like to automate boring stuff',
+      'Cartoons and animes attract me more than movies',
+      'Want to know more about me?',
+      'Please take a tour through my website'],
       autoStart: true,
       loop: true,
       typeColor: 'white'
@@ -32,7 +38,6 @@ export class IntroComponent implements OnInit {
 
   navigate(elementId) {
     const element = document.getElementById(elementId);
-    console.log(element);
     element.scrollIntoView({behavior: 'smooth'});
   }
 

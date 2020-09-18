@@ -1,9 +1,38 @@
-<div class="carousel slide" id="education-slides">
+<div class="carousel slide" id="education-slides" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#education-slides" data-slide-to="0" class="active"></li>
     <li data-target="#education-slides" data-slide-to="1"></li>
     <li data-target="#education-slides" data-slide-to="2"></li>
+    <a class="carousel-control-prev arrow" href="#education-slides" role="button" data-slide="prev" #rightArrow (click)="animateArrow(rightArrow)">
+      <!-- <fa-icon [styles]="{'stroke':'black', 'color':'black'}" size="3x" class="acheivements" [icon]="faCaretLeft"></fa-icon> -->
+      <i></i>
+      <svg>
+        <use xlink:href="#circle"/>
+      </svg>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next arrow left" href="#education-slides" #leftArrow role="button" data-slide="next" (click)="animateArrow(leftArrow)">
+      <!-- <fa-icon [styles]="{'stroke':'black', 'color':'black'}" class="acheivements" size="3x" [icon]="faCaretRight"></fa-icon> -->
+      <i></i>
+      <svg>
+        <use xlink:href="#circle"/>
+      </svg>
+      <span class="sr-only">Next</span>
+      <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44px" height="44px" id="circle" fill="none" stroke="currentColor">
+            <circle r="20" cy="22" cx="22" id="test"></circle>
+        </symbol>
+      </svg>
+        <!-- <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44px" height="44px" id="circle" fill="none" stroke="currentColor">
+            <circle r="20" cy="22" cx="22" id="test">
+        </symbol>
+    </svg> -->
+    
+    </a>
+    
   </ol>
+  
+
   <div class="carousel-inner">
     <div class="sidebar-heading">
       <h2 class="background"><span>EDUCATION</span></h2>
@@ -29,9 +58,7 @@
           </div>
           <div class="row"> 
             <div class="description">
-              <p>With the all the beautiful memories, I've ended the my secondary school by
-                acheiving second in public examinations.
-              </p>
+              <p><fa-icon class="acheivements" [icon]="faTrophy"></fa-icon>School second in SSC Public Exams.</p>
             </div>
           </div>
           <div class="row">
@@ -52,10 +79,10 @@
                   <h2 class="name">NARAYANA JUNIOR COLLEGE</h2>
                 </div>
                 <div class="row">
-                  <div class="description">
+                  <!-- <div class="description">
                     <p>We'll blah blah blah here. So blah blah had to be entered here, which need to filled
                     </p>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="row">
                   <div class="col-sm-4 d-flex p-0">
@@ -76,8 +103,7 @@
                 </div>
                 <div class="row">
                   <div class="description">
-                    <p>We'll blah blah blah here. So blah blah had to be entered here, which need to filled
-                    </p>
+                    <p><fa-icon class="acheivements" [icon]="faMedal"></fa-icon>Best Outgoing Student</p>
                   </div>
                 </div>
                 <div class="row">
@@ -91,13 +117,6 @@
               </div>
         </div>
     </div>
-    <!-- <a class="carousel-control-prev" href="#education-slides" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#education-slides" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a> -->
+   
   </div>
 </div>
