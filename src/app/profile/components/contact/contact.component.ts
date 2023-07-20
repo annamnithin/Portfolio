@@ -4,9 +4,6 @@ import {faEnvelopeOpenText} from '@fortawesome/free-solid-svg-icons';
 import {faMobileAlt} from '@fortawesome/free-solid-svg-icons';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {ContactService} from '@shared/contact.service';
-
-
-
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -17,7 +14,10 @@ export class ContactComponent implements OnInit {
   faLinkedIn = faLinkedin;
   envelope = faEnvelopeOpenText;
   mobile = faMobileAlt;
-
+  fullname;
+  AgentEmail;
+  description;
+  Phone;
   showDiv = '';
 
   constructor(private builder: FormBuilder, private contact: ContactService) { }

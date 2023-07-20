@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {catchError, map, switchMap} from 'rxjs/operators';
-import {of} from 'rxjs';
+import {Observable, of} from 'rxjs';
 
 
 @Injectable({
@@ -11,11 +11,10 @@ import {of} from 'rxjs';
 export class ContactService {
   private mailApi = 'https://nithin-annam-portfolio.azurewebsites.net/email';
   private postDBApi = 'https://nithin-annam-portfolio.azurewebsites.net/';
-  private result: string;
   constructor(private http: HttpClient) {}
 
-  PostMessage(input: any) {
-    this.http.post(this.mailApi, input, {responseType: 'json'})
+  PostMessage(input: any): Observable<string> {
+    return this.http.post(this.mailApi, input, {responseType: 'json'})
       .pipe(
         switchMap(
           (response) => {
@@ -39,11 +38,6 @@ export class ContactService {
           // Return the error message
           return of(`Request failed: ${error.message}`);
         })
-      ).subscribe(
-      (message) => {
-        // Store the result to the 'result' variable
-        this.result = message;
-      }
-    );
+      );
   }
 }
