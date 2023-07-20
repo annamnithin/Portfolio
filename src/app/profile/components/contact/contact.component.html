@@ -6,43 +6,71 @@
         </h2>
         <div class="cross-line"></div>
       </div>
-    <div class="contact-me-description">
+    <div class="contact-me-description container">
         Want to talk to me?
+      <div class="row">
+        <div class="col-xs-3">
+          <form [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)">
+            <div class="form-group">
+              <label for="AgentEmail">Email</label>
+              <input type="email" class="form-control" name="Email"
+                     aria-describedby="emailHelp" placeholder="Enter email" formControlName="AgentEmail">
+<!--              <small id="emailHelp" class="form-text text-muted">Your email is secure and won't be shared with anyone.</small>-->
+            </div>
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" class="form-control" name="FullName" placeholder="Full Name" formControlName="FullName">
+            </div>
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea class="form-control" formControlName="Description" name="Description"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="Phone">Phone Number</label>
+              <input type="text" class="form-control" formControlName="Phone" placeholder="Phone Number" name="Phone">
+            </div>
+            <button type="submit" style="background-color: #000000; border-color: #000000" class="btn btn-dark" [disabled]="!FormData.valid">
+              Submit
+            </button>
+
+          </form>
+        </div>
+      </div>
     </div>
     <div class="container contact-info">
-        <div class = "row">
+        <div class = "row logo">
             <div class="col-9">
                 <span id="linkedindata" *ngIf="showDiv =='linkedin'">linkedin.com/in/nithin-annam/</span>
             </div>
             <div class="col-3">
                 <div class="LinkedIn" data-toggle="tooltip" data-placement="top" title="Click to navigate">
                     <a (mouseover)="activate('linkedin')" href="https://www.linkedin.com/in/nithin-annam/" id="link" target="_blank">
-                        <fa-icon [icon]="faLinkedIn"></fa-icon>      
+                        <fa-icon class="logo" [icon]="faLinkedIn"></fa-icon>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row logo">
             <div class="col-9">
                 <span id="emaildata" *ngIf="showDiv =='email'">nithinsiva71@gmail.com</span>
             </div>
             <div class="col-3">
-                <a data-toggle="tooltip" data-placement="top" title="Click to mail" href="mailto:nithinsiva71@gmail.com" (mouseover)="activate('email')" class="email"> 
-                    <fa-icon [icon]="envelope"></fa-icon>
-                </a>  
+                <a data-toggle="tooltip" data-placement="top" title="Click to mail" href="mailto:nithinsiva71@gmail.com" (mouseover)="activate('email')" class="email">
+                    <fa-icon class="logo" [icon]="envelope"></fa-icon>
+                </a>
             </div>
-          
+
         </div>
-        <div class="row"> 
+        <div class="row">
             <div class="col-9">
-                <span id="phonedata" *ngIf="showDiv =='phone'">+91 9912312382</span>
+                <span id="phonedata" *ngIf="showDiv =='phone'">+1 786-790-5658</span>
             </div>
             <div class="col-3">
                 <div (mouseover)="activate('phone')" class="phone">
-                    <fa-icon [icon]="mobile"></fa-icon>
+                    <fa-icon class="logo" [icon]="mobile"></fa-icon>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </div>

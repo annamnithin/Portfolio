@@ -11,7 +11,7 @@
 /* leaf animations */
 #education-slides {
   position: relative;
-  
+
 }
 
 .sidebar-heading {
@@ -21,7 +21,7 @@
   background-color: #000;
   z-index: 10;
   position: absolute;
-  display: flex; 
+  display: flex;
   justify-content: center;
 }
 
@@ -38,9 +38,9 @@
     z-index: 1;
 }
 
-.sidebar-heading span { 
-    /* to hide the lines from behind the text, you have to set the background color the same as the container */ 
-    padding: 0 15px; 
+.sidebar-heading span {
+    /* to hide the lines from behind the text, you have to set the background color the same as the container */
+    padding: 0 15px;
     color: white;
     background-color: black;
     font-size: xxx-large;
@@ -92,15 +92,15 @@
   box-shadow: inset 0px 0px 1px #000;
   border: 1px solid #000;
   z-index: 1;
-  -webkit-animation: falling 5s 0s infinite;
+  animation: falling 5s 0s infinite;
 }
 
 #leaves i:nth-of-type(2n) {
-  -webkit-animation: falling2 5s 0s infinite;
+  animation: falling2 5s 0s infinite;
 }
 
 #leaves i:nth-of-type(3n) {
-  -webkit-animation: falling3 5s 0s infinite;
+  animation: falling3 5s 0s infinite;
 }
 
 #leaves i:before {
@@ -175,40 +175,40 @@
   #leaves i:nth-of-type(3n+2):before  { height:4px; width:4px; top:12px; right:1px; }
   #leaves i:nth-of-type(3n+2):after  { height:10px; width:2px; top:1px; left:8px; }
    */
-#leaves i:nth-of-type(n) {
-  -webkit-animation-delay: 0.1s;
+#leaves i:nth-child(n) {
+  animation-delay: 0.1s;
 }
 
 #leaves i:nth-of-type(2n) {
-  -webkit-animation-delay: 1.9s;
+  animation-delay: 1.9s;
 }
 
 #leaves i:nth-of-type(3n) {
-  -webkit-animation-delay: 2.3s;
+  animation-delay: 2.3s;
 }
 
 #leaves i:nth-of-type(4n) {
-  -webkit-animation-delay: 4.4s;
+  animation-delay: 4.4s;
 }
 
 #leaves i:nth-of-type(5n) {
-  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
 }
 
 #leaves i:nth-of-type(6n) {
-  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
 }
 
 #leaves i:nth-of-type(7n) {
-  -webkit-animation-delay: 2.8s;
+  animation-delay: 2.8s;
 }
 
 #leaves i:nth-of-type(8n) {
-  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
 }
 
 #leaves i:nth-of-type(9n) {
-  -webkit-animation-delay: 3.3s;
+  animation-delay: 3.3s;
 }
 
 #leaves i:nth-of-type(n) {
@@ -233,14 +233,14 @@
 
 
 #leaves i:nth-of-type(n) {
-  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 
-@-webkit-keyframes falling {
+@keyframes falling {
 
   0% {
-    -webkit-transform:
-      translate3d(300, 0, 0) rotate(0deg);
+    transform:
+      translate3d(3px, 0, 0) rotate(0deg);
   }
 
   50% {
@@ -248,15 +248,15 @@
   }
 
   100% {
-    -webkit-transform:
+    transform:
       translate3d(150px, 95vh, 0) rotate(90deg);
     opacity: 0;
   }
 }
 
-@-webkit-keyframes falling3 {
+@keyframes falling3 {
   0% {
-    -webkit-transform:
+    transform:
       translate3d(0, 0, 0) rotate(-20deg);
   }
 
@@ -265,15 +265,15 @@
   }
 
   100% {
-    -webkit-transform:
+    transform:
       translate3d(-230px, 95vh, 0) rotate(-70deg);
     opacity: 0;
   }
 }
 
-@-webkit-keyframes falling2 {
+@keyframes falling2 {
   0% {
-    -webkit-transform:
+    transform:
       translate3d(0, 0, 0) rotate(90deg);
   }
 
@@ -282,7 +282,7 @@
   }
 
   100% {
-    -webkit-transform:
+    transform:
       translate3d(-40vw, 95vh, 0) rotate(0deg);
     opacity: 0;
   }
@@ -357,7 +357,7 @@
 
 .school-background{
   background: url('assets/images/child.png');
-  animation: animatedBackground 1s liner;
+  animation: animatedBackground 1s linear;
   background-position: 0 0;
 }
 
@@ -440,6 +440,12 @@
 .arrow.animate i:after {
   animation: arrowDown 1.6s ease forwards;
 }
+
+.undergraduate{
+  background: url('assets/images/undergraduate-copy.jpg');
+  background-size: 600px 600px;
+}
+
 @keyframes stroke {
   52% {
     transform: rotate(-180deg);
@@ -492,4 +498,109 @@
   display: grid;
   grid-template-columns: repeat(2, 44px);
   grid-gap: 32px;
+}
+
+/* For tablets and medium-sized screens */
+@media (max-width: 992px) {
+  .sidebar-heading h2 {
+    font-size: 25px;
+  }
+
+  .sidebar-heading span {
+    font-size: x-large;
+  }
+
+  #school .name {
+    font-size: 2.5vw;
+  }
+
+  .description {
+    font-size: 1.2vw;
+  }
+  #leaves {
+    right: 10vw;
+  }
+}
+
+/* For mobile and small-sized screens */
+@media (max-width: 768px) {
+  .sidebar-heading h2 {
+    font-size: 18px;
+  }
+
+  .sidebar-heading span {
+    font-size: large;
+  }
+
+  #school .name {
+    font-size: 5vw;
+  }
+
+  .description {
+    font-size: 3vw;
+  }
+  #leaves {
+    right: 5vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .sidebar-heading {
+    width: 30vw;
+  }
+
+  .cross-line {
+    left: -4.5vw;
+  }
+
+  #leaves {
+    right: 2vw;
+  }
+}
+
+/* For very small screens or landscape mobile view */
+@media (max-width: 480px) {
+  .sidebar-heading h2 {
+    font-size: 14px;
+  }
+
+  .sidebar-heading span {
+    font-size: medium;
+  }
+
+  #school .name {
+    font-size: 6vw;
+  }
+
+  .description {
+    font-size: 4vw;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (min-width: 576px) {
+  .responsive-bg {
+    background-size: 100% auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .responsive-bg {
+    background-size: cover;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .responsive-bg {
+    background-size: cover;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .responsive-bg {
+    background-size: cover;
+  }
 }

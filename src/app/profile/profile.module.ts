@@ -5,7 +5,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {HttpClientModule} from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -26,19 +26,20 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [...profileComponents.components, EducationComponent, ContactComponent],
-  imports: [
-    CommonModule,
-    FontAwesomeModule,
-    MatIconModule,
-    MatChipsModule,
-    HttpClientModule,
-    MatSlideToggleModule,
-    MatToolbarModule,
-    FormsModule,
-    NgbModule,
-    MatGridListModule,
-    RouterModule.forRoot(routes, routerOptions)
-  ],
+    imports: [
+        CommonModule,
+        FontAwesomeModule,
+        MatIconModule,
+        MatChipsModule,
+        HttpClientModule,
+        MatSlideToggleModule,
+        MatToolbarModule,
+        FormsModule,
+        NgbModule,
+        MatGridListModule,
+        RouterModule.forRoot(routes, routerOptions),
+        ReactiveFormsModule
+    ],
   exports: [
    ...profileComponents.components
   ]

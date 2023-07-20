@@ -19,7 +19,7 @@
                 <h1 id="heading-card-1" class="heading-card">{{project.projectName}}</h1>
               </div>
             </div>
-  
+
           </div>
           <div class="card-body">
             <div class="container">
@@ -27,9 +27,9 @@
                 <li [ngbNavItem]="tabIndex" *ngFor="let id of projectDetailsId; let tabIndex = index">
                   <a ngbNavLink>{{id}}</a>
                   <ng-template ngbNavContent>
-                    
+
                     <div *ngIf="id == 'Technologies'">
-                       
+
                       <div *ngIf="displayIcons">
                         <div class="row tech-txt" id=''>
                           <mat-chip-list aria-label="Fish selection">
@@ -38,12 +38,12 @@
                           </mat-chip-list>
                         </div>
                       </div>
-  
+
                     </div>
                     <div *ngIf="id == 'Description'">
                       <p>{{project.description}}</p>
                     </div>
-                    
+
                     <div *ngIf="id == 'Duration'">
                       <div id="duration" class="container">
                         <div class="row " style='margin-bottom:4vh' id="from-date">
@@ -84,12 +84,12 @@
               <div [ngbNavOutlet]="nav" class="mt-2"></div>
             </div>
           </div>
-  
+
         </div>
       </div>
     </div>
   </div>
-  
+
 </div>
  -->
 
@@ -99,6 +99,30 @@
   </h2>
   <div class="cross-line"></div>
 </div>
+
+<!--<div class="projects container mt-5 mb-3">-->
+<!--  <div class="row">-->
+<!--    <div class="col-sm-3" *ngFor="let project of projects; index as i">-->
+<!--      <div class="card p-3 mb-2">-->
+<!--        <div class="d-flex justify-content-between">-->
+<!--          <div class="d-flex flex-row align-items-center">-->
+<!--            <div class="icon"> <i class="bx bxl-mailchimp"></i> </div>-->
+<!--            <div class="ms-2 c-details">-->
+<!--              <h3 class="mb-0">{{project.client}}</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="badge"> <span>{{project.role}}</span> </div>-->
+<!--        </div>-->
+<!--        <div class="mt-5">-->
+<!--          <h3 class="heading"><br>{{project.description}}</h3>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--  </div>-->
+<!--</div>-->
+
+
 
 <table class="table table-borderless table-light projects-main">
   <thead>
@@ -139,7 +163,7 @@
               <div class="modal-header">
                 <div class="cardheader-text">
                   <h1 id="heading-card-1" class="modal-title heading-card">{{project.projectName}}</h1>
-                  
+
                 </div>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
@@ -164,7 +188,7 @@
                   <div role="tabpanel" class="tab-pane active" [attr.id]="'technologiesTab'+project.id">
                     <div *ngIf="displayIcons">
                       <div class="tech-txt">
-                       
+
                         <!-- <mat-chip-list aria-label="Fish selection">
                           <mat-chip [ngStyle]="{'background-color':'#000'}" selected
                             *ngFor="let technology of project.technologiesUsed">{{technology}}</mat-chip>
@@ -172,15 +196,15 @@
                         <div class="tech container" >
                           <div *ngFor="let techIcon of project.technicalIcons">
                             <div class="icon" ngClass="{{techIcon}}" data-toggle="tooltip" data-placement="top" data-delay='{"show":"1000"}' title="{{iconDescription[techIcon]}}">
-                              <fa-icon class="fab" [icon]="fetchFabIcon(techIcon)" *ngIf="isFabIcon(techIcon); else elseBlock"></fa-icon>
+                              <fa-icon class="fab" [icon]='fetchFabIcon(techIcon)' *ngIf="isFabIcon(techIcon); else elseBlock"></fa-icon>
                               <ng-template #elseBlock>
                                 <i class="fab" [ngClass]="fetchDevIcon(techIcon)"></i>
                               </ng-template>
                              </div>
-                             
+
                           </div>
-                          
-                        </div>  
+
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -118,7 +118,6 @@ export class ProjectsComponent implements OnInit {
 
   fetchFabIcon(name: string) {
     this.icon = this.fabIcons[name];
-    console.log(this.iconDescription);
     return this.icon;
   }
 
@@ -135,3 +134,5 @@ export class ProjectsComponent implements OnInit {
   }
 
 }
+
+

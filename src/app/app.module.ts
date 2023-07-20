@@ -1,4 +1,4 @@
-import { ProfileModule } from './profile/profile.module';
+import { ProfileModule } from '@profile/profile.module';
 
 import { SharedModule } from '@shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,6 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatIconModule} from '@angular/material/icon';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {ReactiveFormsModule} from '@angular/forms';
+import {ContactService} from '@shared/contact.service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -28,9 +31,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserAnimationsModule,
     MatSliderModule,
     MatIconModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ContactService],
   bootstrap: [AppComponent],
 })
 export class AppModule {

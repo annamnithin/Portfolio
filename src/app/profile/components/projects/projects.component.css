@@ -56,18 +56,18 @@
 
 #animated-cards .card:hover .card-header:first-child {
   background-color: #64348A;
-} */ */
+} */
 
 /* CSS to change Default/'Accent' color */
 
 /* ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
   background-color: #64348A;
- 
+
 }
 
 ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
   background-color: #64348A;
-  
+
 } */
 
 
@@ -187,7 +187,7 @@
   background-color: #000;
   z-index: 0;
   position: absolute;
-  display: flex; 
+  display: flex;
   justify-content: center;
 }
 
@@ -204,21 +204,21 @@
     z-index: 0;
 }
 
-.sidebar-heading span { 
-    /* to hide the lines from behind the text, you have to set the background color the same as the container */ 
-    padding: 0 15px; 
+.sidebar-heading span {
+    /* to hide the lines from behind the text, you have to set the background color the same as the container */
+    padding: 0;
     color: white;
     background-color: black;
     font-size: xxx-large;
 }
 
 .cross-line{
-    width: 0.3vw;
+    width: 0.1em;
     position: relative;
     vertical-align: middle;
     height: 100%;
     background-color:white;
-    right: 1.5vw;
+    right: 1.2em;
     z-index: -1;
 }
 
@@ -309,7 +309,7 @@ tbody tr{
 }
 
 
-.description{   
+.description{
   white-space: normal !important;
   font-size: 1.2vw;
   line-height: 2;
@@ -334,7 +334,7 @@ tbody tr{
   height: 10vh;
   font-size: 3vw;
   border-radius: 15px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .2), 
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .2),
               -1px 0px 2px rgba(0, 0, 0, .2);
    overflow: hidden;
 }
@@ -347,7 +347,7 @@ tbody tr{
 }
 .tech.container .icon:hover .fab {
   transform: translate(-50%, -50%)scale(1.4) rotate(360deg);
-  color: #fff; 
+  color: #fff;
 }
 
 
@@ -370,4 +370,115 @@ tbody tr{
  .sqlserver:hover:before,.azure:hover:before, .github:hover:before  {
   background: #000;
 }
-   
+
+@media (min-width: 320px) and (max-width: 812px) {
+  .contact{
+    background-size: 20em;
+  }
+
+
+  .sidebar-heading {
+    width: 4em;
+    height: 45em;
+    padding: 0;
+
+  }
+
+  .sidebar-heading span {
+    /* to hide the lines from behind the text, you have to set the background color the same as the container */
+    font-size: 0.7em;
+    padding: 0;
+  }
+
+
+
+  .contact-me-description .container{
+    display: block;
+    text-align: center;
+  }
+
+  .contact-info{
+    right: 0;
+    width: 2em;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+}
+
+@media only screen  and (min-device-width: 834px)
+and (max-device-width: 1112px) {
+
+  .contact-me-description {
+    font-size: 4vw;
+    width: 15em;
+  }
+
+  .sidebar-heading {
+    width: 7em;
+    height: 45em;
+  }
+
+  .cross-line{
+    left: -1.7em;
+  }
+}
+
+/*code for card layout*/
+
+.project .container .mt-5{
+  margin-top: 0;
+}
+
+.card {
+  border-radius: 1em;
+}
+
+.c-details span {
+  font-weight: 300;
+  font-size: 13px
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 39px
+}
+
+.badge span {
+  background-color: #ffffff;
+  width: 6em;
+  height: 25px;
+  padding-bottom: 3px;
+  border-radius: 1em;
+  border: 0.2em solid black;
+  display: flex;
+  color: #000000;
+  justify-content: center;
+  white-space: normal;
+
+}
+
+.progress {
+  height: 10px;
+  border-radius: 10px
+}
+
+.progress div {
+  background-color: red
+}
+
+.text1 {
+  font-size: 14px;
+  font-weight: 600
+}
+
+.text2 {
+  color: #a5aec0
+}
