@@ -4,30 +4,30 @@
     <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
     <label class="menu-open-button" for="menu-open">
       <div class="logo">
-  
+
         <div id="yin-yang"></div>
       </div>
     </label>
-    
+
     <a (click)="navigate('intro')" class="menu-item"> <fa-icon [icon]="home"></fa-icon></a>
     <a (click)="navigate('education')" class="menu-item"> <fa-icon [icon]="education"></fa-icon></a>
     <a (click)="navigate('projects')" class="menu-item"> <fa-icon [icon]="projects"></fa-icon> </a>
     <a (click)="navigate('contact-me')" class="menu-item"> <fa-icon [icon]="contact"></fa-icon> </a>
-    
-    
+
+
   </nav>
-  
-  
+
+
   <!-- filters -->
-  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <svg xmlns="http://www.w3.org/2000/svg">
       <defs>
         <filter id="shadowed-goo">
-            
+
             <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
             <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
             <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
             <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
-            <feOffset in="shadow" dx="1" dy="1" result="shadow" /> 
+            <feOffset in="shadow" dx="1" dy="1" result="shadow" />
             <feComposite in2="shadow" in="goo" result="goo" />
             <feComposite in2="goo" in="SourceGraphic" result="mix" />
         </filter>
@@ -35,6 +35,7 @@
             <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
             <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
             <feComposite in2="goo" in="SourceGraphic" result="mix" />
+             <div>check</div>
         </filter>
       </defs>
   </svg>
