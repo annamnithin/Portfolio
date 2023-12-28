@@ -8,34 +8,34 @@
       </div>
     <div class="contact-me-description container">
         Want to talk to me?
-      <div class="row">
-        <div class="col-xs-3">
-          <form [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)">
-            <div class="form-group">
-              <label [for]="AgentEmail">Email</label>
-              <input type="email" class="form-control" name="Email"
-                     aria-describedby="emailHelp" placeholder="Enter email" formControlName="AgentEmail">
-<!--              <small id="emailHelp" class="form-text text-muted">Your email is secure and won't be shared with anyone.</small>-->
-            </div>
-            <div class="form-group">
-              <label [for]="fullname">Full Name</label>
-              <input type="text" class="form-control" name="FullName" placeholder="Full Name" formControlName="FullName">
-            </div>
-            <div class="form-group">
-              <label [for]="description">Description</label>
-              <textarea class="form-control" formControlName="Description" name="Description"></textarea>
-            </div>
-            <div class="form-group">
-              <label [for]="Phone">Phone Number</label>
-              <input type="text" class="form-control" formControlName="Phone" placeholder="Phone Number" name="Phone">
-            </div>
-            <button type="submit" style="background-color: #000000; border-color: #000000" class="btn btn-dark" [disabled]="!FormData.valid">
-              Submit
-            </button>
+<!--      <div class="row">-->
+<!--        <div class="col-xs-3">-->
+<!--          <form [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)">-->
+<!--            <div class="form-group">-->
+<!--              <label [for]="AgentEmail">Email</label>-->
+<!--              <input type="email" class="form-control" name="Email"-->
+<!--                     aria-describedby="emailHelp" placeholder="Enter email" formControlName="AgentEmail">-->
+<!--&lt;!&ndash;              <small id="emailHelp" class="form-text text-muted">Your email is secure and won't be shared with anyone.</small>&ndash;&gt;-->
+<!--            </div>-->
+<!--            <div class="form-group">-->
+<!--              <label [for]="fullname">Full Name</label>-->
+<!--              <input type="text" class="form-control" name="FullName" placeholder="Full Name" formControlName="FullName">-->
+<!--            </div>-->
+<!--            <div class="form-group">-->
+<!--              <label [for]="description">Description</label>-->
+<!--              <textarea class="form-control" formControlName="Description" name="Description"></textarea>-->
+<!--            </div>-->
+<!--            <div class="form-group">-->
+<!--              <label [for]="Phone">Phone Number</label>-->
+<!--              <input type="text" class="form-control" formControlName="Phone" placeholder="Phone Number" name="Phone">-->
+<!--            </div>-->
+<!--            <button type="submit" style="background-color: #000000; border-color: #000000" class="btn btn-dark" [disabled]="!FormData.valid">-->
+<!--              Submit-->
+<!--            </button>-->
 
-          </form>
-        </div>
-      </div>
+<!--          </form>-->
+<!--        </div>-->
+<!--      </div>-->
     </div>
     <div class="container contact-info">
         <div class = "row logo">
