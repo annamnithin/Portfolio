@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { FooterComponent } from './footer/footer.component';\nexport const components = [FooterComponent];\nexport * from './footer/footer.component';","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
